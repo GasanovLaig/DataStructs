@@ -11,7 +11,7 @@ IsType(const std::string& integerNumber)
 	std::regex lineFormat("[+-]?[0-9]+");
 	if (!std::regex_match(integerNumber, lineFormat))
 	{
-		throw std::exception("Ââîäèòå öåëîå ÷èñëî!\n->");
+		throw std::exception("Ğ’Ğ²Ğ¾Ğ´Ğ¸Ñ‚Ğµ Ñ†ĞµĞ»Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾!\n->");
 	}
 }
 
@@ -22,7 +22,7 @@ IsType(const std::string& floatPointNumber)
 	std::regex lineFormat("[+-]?[0-9]+[.]+[0-9]+");
 	if (!std::regex_match(floatPointNumber, lineFormat))
 	{
-		throw std::exception("Ââîäèòå äåñÿòè÷íóş äğîáü!\n->");
+		throw std::exception("Ğ’Ğ²Ğ¾Ğ´Ğ¸Ñ‚Ğµ Ğ´ĞµÑÑÑ‚Ğ¸Ñ‡Ğ½ÑƒÑ Ğ´Ñ€Ğ¾Ğ±ÑŒ!\n->");
 	}
 }
 
@@ -35,7 +35,7 @@ T ConvertToType(const std::string& line)
 
 	if (inputStringStream.fail())
 	{
-		throw std::exception("Ñîáëşäàéòå äèàïàçîí!\n->");
+		throw std::exception("Ğ¡Ğ¾Ğ±Ğ»ÑĞ´Ğ°Ğ¹Ñ‚Ğµ Ğ´Ğ¸Ğ°Ğ¿Ğ°Ğ·Ğ¾Ğ½!\n->");
 	}
 
 	return value;
@@ -63,7 +63,7 @@ T GetValue(T min = 0, T max = 0,
 			if (IsRange != nullptr &&
 				!(IsRange(value, min, max)))
 			{
-				throw std::exception("Ñîáëşäàéòå äèàïàçîí!\n->");
+				throw std::exception("Ğ¡Ğ¾Ğ±Ğ»ÑĞ´Ğ°Ğ¹Ñ‚Ğµ Ğ´Ğ¸Ğ°Ğ¿Ğ°Ğ·Ğ¾Ğ½!\n->");
 			}
 
 			return value;
@@ -86,7 +86,7 @@ std::string GetValue(const std::regex& lineFormat =
 			getline(std::cin, line);
 			if (line.empty() || !std::regex_match(line, lineFormat))
 			{
-				throw std::exception("Ââîäèòå ñòğîêó!\n->");
+				throw std::exception("Ğ’Ğ²Ğ¾Ğ´Ğ¸Ñ‚Ğµ ÑÑ‚Ñ€Ğ¾ĞºÑƒ!\n->");
 			}
 
 			return line;

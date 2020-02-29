@@ -22,7 +22,7 @@ void Print(T& abstractStructData, void (T::*SetData)(DATA_TYPE data),
 
 		try
 		{
-			cout << "\nÂâåäèòå íîìåð êîìàíäû: ";
+			cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹: ";
 			CommandAsd command = GetValue(CommandAsd::Input,
 				CommandAsd::Exit, IsRange);
 
@@ -30,7 +30,7 @@ void Print(T& abstractStructData, void (T::*SetData)(DATA_TYPE data),
 			{
 				case CommandAsd::Input:
 				{
-					cout << "Ââåäèòå çíà÷åíèå: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 					DATA_TYPE data = GetValue<DATA_TYPE>();
 					(abstractStructData.*SetData)(data);
 					break;
@@ -48,7 +48,7 @@ void Print(T& abstractStructData, void (T::*SetData)(DATA_TYPE data),
 		}
 		catch (const bad_alloc&)
 		{
-			cerr << "Îøèáêà âûäåëåíèÿ ïàìÿòè!\n";
+			cerr << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ñ‹Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð¿Ð°Ð¼ÑÑ‚Ð¸!\n";
 			system("pause");
 		}
 		catch (const exception& exception)
@@ -61,15 +61,15 @@ void Print(T& abstractStructData, void (T::*SetData)(DATA_TYPE data),
 
 void PrintTextMenu()
 {
-	cout << "\n\t0 Äîáàâèòü ýëåìåíò.\n" <<
-		"\t1 Èçâëå÷ü ýëåìåíò.\n" <<
-		"\t2 Âûõîä.\n\n";
+	cout << "\n\t0 Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚.\n" <<
+		"\t1 Ð˜Ð·Ð²Ð»ÐµÑ‡ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚.\n" <<
+		"\t2 Ð’Ñ‹Ñ…Ð¾Ð´.\n\n";
 }
 
 void PrintMainTextMenu()
 {
-	cout << "Ãëàâíîå ìåíþ\n\n\t0 Ñîçäàòü ñòåê.\n" <<
-		"\t1 Ñîçäàòü î÷åðåäü íà îñíîâå äâóõ ñòåêîâ.\n" <<
-		"\t2 Ñîçäàòü êîëüöåâîé áóôåð.\n" <<
-		"\t3 Âûõîä èç ïðîãðàììû.\n\n";
+	cout << "Ð“Ð»Ð°Ð²Ð½Ð¾Ðµ Ð¼ÐµÐ½ÑŽ\n\n\t0 Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ ÑÑ‚ÐµÐº.\n" <<
+		"\t1 Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ Ð¾Ñ‡ÐµÑ€ÐµÐ´ÑŒ Ð½Ð° Ð¾ÑÐ½Ð¾Ð²Ðµ Ð´Ð²ÑƒÑ… ÑÑ‚ÐµÐºÐ¾Ð².\n" <<
+		"\t2 Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ ÐºÐ¾Ð»ÑŒÑ†ÐµÐ²Ð¾Ð¹ Ð±ÑƒÑ„ÐµÑ€.\n" <<
+		"\t3 Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹.\n\n";
 }

@@ -5,7 +5,7 @@ void IsEmpty(const List* list)
 {
 	if (list == nullptr || list->Head == nullptr)
 	{
-		throw std::exception("Список пуст!");
+		throw std::exception("РЎРїРёСЃРѕРє РїСѓСЃС‚!");
 	}
 }
 
@@ -13,10 +13,10 @@ void IsSorted(const List* list)
 {
 	if (list->Size < 2)
 	{
-		throw std::exception("Список отсортирован!");
+		throw std::exception("РЎРїРёСЃРѕРє РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅ!");
 	}
 	else if (list->IsSorted)
 	{
-		throw std::exception("Список отсортирован!");
+		throw std::exception("РЎРїРёСЃРѕРє РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅ!");
 	}
 }

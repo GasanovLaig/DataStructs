@@ -362,7 +362,7 @@ void RedBlackTree<T>::PrintRecursive(RbTreeNode<T>* node,
 	{
 		std::cout << prefix;
 		std::cout << "|___";
-		std::cout << (node->IsBlack ? "Черный " : "Красный ")
+		std::cout << (node->IsBlack ? "Р§РµСЂРЅС‹Р№ " : "РљСЂР°СЃРЅС‹Р№ ")
 			<< node->Data << '\n';
 
 		PrintRecursive(node->Right,

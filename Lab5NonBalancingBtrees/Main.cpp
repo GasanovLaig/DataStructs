@@ -11,7 +11,7 @@ int main()
 		system("cls");
 		PrintTextMainMenu();
 
-		cout << "\nÂâåäèòå êîìàíäó: ";
+		cout << "\nÐ¢Ñ‚Ñ…Ñ„ÑˆÑ’Ñ… ÑŠÑŽÑŒÑ€ÑÑ„Ñ“: ";
 		CommandMenu command = GetValue(CommandMenu::BinarySearchTree,
 			CommandMenu::Exit, IsRange);
 

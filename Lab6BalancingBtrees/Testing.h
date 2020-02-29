@@ -23,14 +23,14 @@ void Testing(size_t elementCount)
 	using Avl = AvlTree<short>;
 	using Rbt = RedBlackTree<short>;
 
-	std::cout << "\nÂðåìÿ âñòàâêè  â AvlTree: ";
+	std::cout << "\nÐ’Ñ€ÐµÐ¼Ñ Ð²ÑÑ‚Ð°Ð²ÐºÐ¸  Ð² AvlTree: ";
 	TestFunction(avlTree, &Avl::Add, elementCount);
-	std::cout << "\nÂðåìÿ óäàëåíèÿ äîáàâëåíûõ ýëåìåíòîâ èç AvlTree: ";
+	std::cout << "\nÐ’Ñ€ÐµÐ¼Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¸Ð· AvlTree: ";
 	TestFunction(avlTree, &Avl::Remove, elementCount);
 	std::cout << '\n';
 
-	std::cout << "\nÂðåìÿ âñòàâêè  â RedBlackTree: ";
+	std::cout << "\nÐ’Ñ€ÐµÐ¼Ñ Ð²ÑÑ‚Ð°Ð²ÐºÐ¸  Ð² RedBlackTree: ";
 	TestFunction(rbTree, &Rbt::Add, elementCount);
-	std::cout << "\nÂðåìÿ óäàëåíèÿ  äîáàâëåííûõ ýëåìåíòîâ èç RedBlackTree: ";
+	std::cout << "\nÐ’Ñ€ÐµÐ¼Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ  Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¸Ð· RedBlackTree: ";
 	TestFunction(rbTree, &Rbt::Remove, elementCount);
 }

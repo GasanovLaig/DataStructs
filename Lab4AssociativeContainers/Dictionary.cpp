@@ -5,7 +5,7 @@ void Dictionary::Add(const Pair& pair)
 	auto findedPair = _table.Find(pair.Key);
 	if (!findedPair.empty())
 	{
-		throw std::exception("Такой ключ в таблице уже существует!");
+		throw std::exception("РўР°РєРѕР№ РєР»СЋС‡ РІ С‚Р°Р±Р»РёС†Рµ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
 	}
 
 	return _table.Add(pair);
@@ -16,7 +16,7 @@ std::vector<const Pair*> Dictionary::Find(const std::string& key)
 	auto findedPair = _table.Find(key);
 	if (findedPair.empty())
 	{
-		throw std::exception("Ключ не найден!");
+		throw std::exception("РљР»СЋС‡ РЅРµ РЅР°Р№РґРµРЅ!");
 	}
 
 	return findedPair;

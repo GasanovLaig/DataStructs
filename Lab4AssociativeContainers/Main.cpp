@@ -9,7 +9,7 @@ int main()
 		system("cls");
 		PrintMainTextMenu();
 
-		cout << "\nÂâåäèòå íîìåð êîìàíäû: ";
+		cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹: ";
 		CommandMenu command = GetValue(CommandMenu::HashTable,
 			CommandMenu::Exit, IsRange);
 

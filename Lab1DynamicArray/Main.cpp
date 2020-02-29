@@ -8,38 +8,38 @@ int main()
 	while (true)
 	{
 		system("cls");
-		cout << " Ìàññèâ (" << container->Size << " ýëåìåíòà)\n";
+		cout << " ÐœÐ°ÑÑÐ¸Ð² (" << container->Size << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°)\n";
 		PrintArray(container);
 		cout << '\n';
 		PrintMenu();
 
-		cout << "\nÂâåäèòå íîìåð êîìàíäû: ";
+		cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹: ";
 		Command command = GetValue<Command>(Command::DeleteValue,
 			Command::Exit,	IsRange);
 		switch (command)
 		{
 			case Command::DeleteValue:
 			{
-				cout << "Ââåäèòå èíäåêñ ýëåìåíòà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 				DeleteElement(container,
 					GetValue<size_t>(0, (container->Size - 1), IsRange));
 				break;
 			}
 			case Command::InsertInBegin:
 			{
-				cout << "Ââåäèòå çíà÷åíèå ýëåìåíòà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 				InsertElement(container, 0, GetValue<int>());
 				break;
 			}
 			case Command::InsertInEnd:
 			{
-				cout << "Ââåäèòå çíà÷åíèå ýëåìåíòà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 				InsertElement(container, container->Size, GetValue<int>());
 				break;
 			}
 			case Command::InsertAfter:
 			{
-				cout << "Ââåäèòå èíäåêñ ýëåìåíòà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 				InsertElement(container,
 					(GetValue<size_t>(0, (container->Size - 1), IsRange) + 1),
 					GetValue<int>());
@@ -52,7 +52,7 @@ int main()
 			}
 			case Command::LinearSearch:
 			{
-				cout << "Ââåäèòå ýëåìåíò ïîèñêà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¿Ð¾Ð¸ÑÐºÐ°: ";
 				LinearSearch(container, GetValue<int>());
 				cout << '\n';
 				system("pause");
@@ -60,7 +60,7 @@ int main()
 			}
 			case Command::BinarySearch:
 			{
-				cout << "Ââåäèòå ýëåìåíò ïîèñêà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¿Ð¾Ð¸ÑÐºÐ°: ";
 				BinarySearch(container, GetValue<int>());
 				cout << '\n';
 				system("pause");

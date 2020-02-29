@@ -44,7 +44,7 @@ RingBuffer<T>::RingBuffer(size_t maxSize)
 	}
 	else
 	{
-		throw std::exception("Минимальный размер буфера 1!");
+		throw std::exception("РњРёРЅРёРјР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ Р±СѓС„РµСЂР° 1!");
 	}
 }
 
@@ -81,7 +81,7 @@ T RingBuffer<T>::Dequeue()
 {
 	if (IsEmpty())
 	{
-		throw std::exception("Буфер пуст!");
+		throw std::exception("Р‘СѓС„РµСЂ РїСѓСЃС‚!");
 	}
 
 	if (_size > _maxSize)
@@ -99,7 +99,7 @@ T RingBuffer<T>::Dequeue()
 template <class T>
 void RingBuffer<T>::Print()
 {
-	std::cout << "Количество элементов: " << _size <<
+	std::cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ: " << _size <<
 		"(" << _maxSize << ")\n\n";
 
 	Node<T>* current = _head;

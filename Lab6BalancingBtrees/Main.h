@@ -18,10 +18,10 @@ void PrintMenu(T& tree)
 	while (true)
 	{
 		system("cls");
-		cout << "Âûñîòà äåðåâà: " << tree.GetHeight() << "\n\n";
+		cout << "Ð’Ñ‹ÑÐ¾Ñ‚Ð° Ð´ÐµÑ€ÐµÐ²Ð°: " << tree.GetHeight() << "\n\n";
 		tree.Print();
 		PrintDataStructTextMenu();
-		cout << "\nÂâåäèòå íîìåð êîìàíäû: ";
+		cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹: ";
 		Command command = GetValue(Command::AddRandomValues,
 			Command::Exit, IsRange);
 
@@ -29,7 +29,7 @@ void PrintMenu(T& tree)
 		{
 			case Command::AddRandomValues:
 			{
-				cout << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: ";
 				size_t count = GetValue<size_t>();
 				for (size_t i = 0; i < count; ++i)
 				{
@@ -39,26 +39,26 @@ void PrintMenu(T& tree)
 			}
 			case Command::AddValue:
 			{
-				cout << "Ââåäèòå êëþ÷: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡: ";
 				DataType key = GetValue<DataType>();
 				tree.Add(key);
 				break;
 			}
 			case Command::RemoveValue:
 			{
-				cout << "Ââåäèòå êëþ÷: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡: ";
 				DataType key = GetValue<DataType>();
 				tree.Remove(key);
 				break;
 			}
 			case Command::FindValue:
 			{
-				cout << "Ââåäèòå êëþ÷: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡: ";
 				DataType key = GetValue<DataType>();
 				bool isFinded = tree.Find(key);
 				cout << ((isFinded) ?
-					"\nÊëþ÷ íàéäåí!\n" :
-					"\nÊëþ÷ íå íàéäåí!\n");
+					"\nÐšÐ»ÑŽÑ‡ Ð½Ð°Ð¹Ð´ÐµÐ½!\n" :
+					"\nÐšÐ»ÑŽÑ‡ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½!\n");
 				system("pause");
 				break;
 			}
@@ -72,17 +72,17 @@ void PrintMenu(T& tree)
 
 void PrintMainTextMenu()
 {
-	cout << "\n\n\t 0 ÀÂË-äåðåâî.\n" <<
-		"\t 1 Êðàñíî-÷¸ðíîå äåðåâî.\n" <<
-		"\t 2 Òåñòèðîâàíèå âñòàâêè è óäàëåíèÿ äåðåâüåâ.\n" <<
-		"\t 3 Âûõîä èç ïðîãðàììû.\n";
+	cout << "\n\n\t 0 ÐÐ’Ð›-Ð´ÐµÑ€ÐµÐ²Ð¾.\n" <<
+		"\t 1 ÐšÑ€Ð°ÑÐ½Ð¾-Ñ‡Ñ‘Ñ€Ð½Ð¾Ðµ Ð´ÐµÑ€ÐµÐ²Ð¾.\n" <<
+		"\t 2 Ð¢ÐµÑÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð²ÑÑ‚Ð°Ð²ÐºÐ¸ Ð¸ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ Ð´ÐµÑ€ÐµÐ²ÑŒÐµÐ².\n" <<
+		"\t 3 Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹.\n";
 }
 
 void PrintDataStructTextMenu()
 {
-	cout << "\n\n\t 0 Äîáàâèòü n ðàíäîìíûõ êëþ÷åé.\n" <<
-		"\t 1 Äîáàâèòü êëþ÷.\n" <<
-		"\t 2 Óäàëèòü êëþ÷.\n" <<
-		"\t 3 Ïîèñê ïî êëþ÷ó.\n" <<
-		"\t 4 Âûõîä â ãëàâíîå ìåíþ.\n";
+	cout << "\n\n\t 0 Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ n Ñ€Ð°Ð½Ð´Ð¾Ð¼Ð½Ñ‹Ñ… ÐºÐ»ÑŽÑ‡ÐµÐ¹.\n" <<
+		"\t 1 Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÐºÐ»ÑŽÑ‡.\n" <<
+		"\t 2 Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÐºÐ»ÑŽÑ‡.\n" <<
+		"\t 3 ÐŸÐ¾Ð¸ÑÐº Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ.\n" <<
+		"\t 4 Ð’Ñ‹Ñ…Ð¾Ð´ Ð² Ð³Ð»Ð°Ð²Ð½Ð¾Ðµ Ð¼ÐµÐ½ÑŽ.\n";
 }

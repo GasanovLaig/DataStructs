@@ -1,4 +1,4 @@
-﻿#pragma once
+яЛП#pragma once
 #include "TreapNode.h"
 #include <algorithm>
 

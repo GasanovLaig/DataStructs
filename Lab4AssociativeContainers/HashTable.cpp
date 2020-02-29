@@ -79,7 +79,7 @@ void HashTable::Add(const Pair& pair)
 		{
 			if (pairIterator->Value == pair.Value)
 			{
-				throw std::exception("Òàêàÿ ïàðà óæå èìååòñÿ!");
+				throw std::exception("Ð¢Ð°ÐºÐ°Ñ Ð¿Ð°Ñ€Ð° ÑƒÐ¶Ðµ Ð¸Ð¼ÐµÐµÑ‚ÑÑ!");
 			}
 		}
 	}
@@ -96,7 +96,7 @@ void HashTable::Remove(const std::string& key)
 {
 	if ((_lists[Hash(key)]->GetHead()) == nullptr)
 	{
-		throw std::exception("Êëþ÷ íå íàéäåí!");
+		throw std::exception("ÐšÐ»ÑŽÑ‡ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½!");
 	}
 	size_t deletedElementCount = _lists[Hash(key)]->Remove(key);
 	_size -= deletedElementCount;

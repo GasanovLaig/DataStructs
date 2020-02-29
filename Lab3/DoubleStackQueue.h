@@ -22,7 +22,7 @@ T DoubleStackQueue<T>::Dequeue()
 {
 	if (IsEmpty())
 	{
-		throw std::exception("Очередь пуста!");
+		throw std::exception("РћС‡РµСЂРµРґСЊ РїСѓСЃС‚Р°!");
 	}
 
 	if (_out.IsEmpty())

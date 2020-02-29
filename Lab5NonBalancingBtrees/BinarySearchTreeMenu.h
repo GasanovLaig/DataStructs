@@ -19,7 +19,7 @@ void PrintBinarySearchTreeMenu()
 		tree.Print();
 		PrintBinarySearchTreeTextMenu();
 
-		cout << "\nВведите команду: ";
+		cout << "\nРўС‚С…С„С€С’С… СЉСЋСЊСЂСЌС„С“: ";
 		BstCommand command = GetValue(BstCommand::AddValue,
 			BstCommand::Exit, IsRange);
 
@@ -29,13 +29,13 @@ void PrintBinarySearchTreeMenu()
 			{
 				case BstCommand::AddValue:
 				{
-					cout << "Введите ключ: ";
+					cout << "РўС‚С…С„С€С’С… СЉС‹СћС—: ";
 					tree.Add(GetValue<T>());
 					break;
 				}
 				case BstCommand::AddRandomValues:
 				{
-					cout << "Введите количество элементов: ";
+					cout << "РўС‚С…С„С€С’С… СЉСЋС‹С€С—С…С‘С’С‚СЋ В§С‹С…СЊС…СЌС’СЋС‚: ";
 					size_t count = GetValue<size_t>();
 					for (size_t i = 0; i < count; ++i)
 					{
@@ -45,17 +45,17 @@ void PrintBinarySearchTreeMenu()
 				}
 				case BstCommand::RemoveValue:
 				{
-					cout << "Введите ключ: ";
+					cout << "РўС‚С…С„С€С’С… СЉС‹СћС—: ";
 					tree.Remove(GetValue<T>());
 					break;
 				}
 				case BstCommand::FindValue:
 				{
-					cout << "Введите ключ: ";
+					cout << "РўС‚С…С„С€С’С… СЉС‹СћС—: ";
 					const BstNode<T>* result = tree.Find(GetValue<T>());
 					if (result == nullptr)
 					{
-						 std::exception("Ключ не найден!");
+						 std::exception("РЄС‹СћС— СЌС… СЌСЂС‰С„С…СЌ!");
 					}
 					cout << result->Data << '\n';
 					system("pause");
@@ -63,11 +63,11 @@ void PrintBinarySearchTreeMenu()
 				}
 				case BstCommand::FindMin:
 				{
-					cout << "Введите ключ: ";
+					cout << "РўС‚С…С„С€С’С… СЉС‹СћС—: ";
 					const BstNode<T>* result = tree.FindMin();
 					if (result == nullptr)
 					{
-						std::exception("Минимальный ключ не найден!");
+						std::exception("Р¬С€СЌС€СЊСЂС‹СњСЌС›С‰ СЉС‹СћС— СЌС… СЌСЂС‰С„С…СЌ!");
 					}
 					cout << result->Data << '\n';
 					system("pause");
@@ -75,11 +75,11 @@ void PrintBinarySearchTreeMenu()
 				}
 				case BstCommand::FindMax:
 				{
-					cout << "Введите ключ: ";
+					cout << "РўС‚С…С„С€С’С… СЉС‹СћС—: ";
 					const BstNode<T>* result = tree.FindMax();
 					if (result == nullptr)
 					{
-						std::exception("Максимальный ключ не найден!");
+						std::exception("Р¬СЂСЉС‘С€СЊСЂС‹СњСЌС›С‰ СЉС‹СћС— СЌС… СЌСЂС‰С„С…СЌ!");
 					}
 					cout << result->Data << '\n';
 					system("pause");
@@ -93,7 +93,7 @@ void PrintBinarySearchTreeMenu()
 		}
 		catch (const bad_alloc&)
 		{
-			cerr << "Ошибка выделения памяти!\n";
+			cerr << "Р®СС€СЃСЉСЂ С‚С›С„С…С‹С…СЌС€Сџ СЏСЂСЊСџС’С€!\n";
 			system("pause");
 		}
 		catch (const exception& exception)
@@ -106,11 +106,11 @@ void PrintBinarySearchTreeMenu()
 
 void PrintBinarySearchTreeTextMenu()
 {
-	cout << "\n\n\t 0 Добавить ключ.\n" <<
-		"\t 1 Добавить n рандомных ключей.\n" <<
-		"\t 2 Удалить ключ.\n" <<
-		"\t 3 Поиск по ключу.\n" <<
-		"\t 4 Поиск минимального ключа.\n" <<
-		"\t 5 Поиск максимальног ключа.\n" <<
-		"\t 6 Выход в главное меню.\n";
+	cout << "\n\n\t 0 Р¤СЋСЃСЂС‚С€С’Сњ СЉС‹СћС—.\n" <<
+		"\t 1 Р¤СЋСЃСЂС‚С€С’Сњ n в„–СЂСЌС„СЋСЊСЌС›С• СЉС‹СћС—С…С‰.\n" <<
+		"\t 2 РіС„СЂС‹С€С’Сњ СЉС‹СћС—.\n" <<
+		"\t 3 РЇСЋС€С‘СЉ СЏСЋ СЉС‹СћС—С“.\n" <<
+		"\t 4 РЇСЋС€С‘СЉ СЊС€СЌС€СЊСЂС‹СњСЌСЋСѓСЋ СЉС‹СћС—СЂ.\n" <<
+		"\t 5 РЇСЋС€С‘СЉ СЊСЂСЉС‘С€СЊСЂС‹СњСЌСЋСѓ СЉС‹СћС—СЂ.\n" <<
+		"\t 6 РўС›С•СЋС„ С‚ СѓС‹СЂС‚СЌСЋС… СЊС…СЌСћ.\n";
 }

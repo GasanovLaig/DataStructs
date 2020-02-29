@@ -8,34 +8,34 @@ int main()
 	while (true)
 	{
 		system("cls");
-		cout << "Êîëè÷åñòâî ýëåìåíòîâ â ñïèñêå: " << list->Size << '\n';
+		cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð² ÑÐ¿Ð¸ÑÐºÐµ: " << list->Size << '\n';
 		PrintList(list);
 		PrintMenu();
 
 		size_t lastElementIndex = list->Size - 1;
 		try
 		{
-			cout << "\nÂâåäèòå íîìåð êîìàíäû: ";
+			cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹: ";
 			Command command = GetValue(Command::AddValue,
 				Command::Exit, IsRange);
 			switch (command)
 			{
 				case Command::AddValue:
 				{
-					std::cout << "Ââåäèòå çíà÷åíèå: ";
+					std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 					AddNode(list, GetValue<int>());
 					break; 
 				}
 				case Command::DeleteValue:
 				{
-					std::cout << "Ââåäèòå èíäåêñ ýëåìåíòà: ";
+					std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 					DeleteNode(list, GetValue<size_t>(0, list->Size - 1,
 						IsRange));
 					break;
 				}
 				case Command::InsertInBegin:
 				{
-					std::cout << "Ââåäèòå çíà÷åíèå: ";
+					std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 					InsertNode(list, 0, GetValue<int>());
 					break;
 				}
@@ -47,7 +47,7 @@ int main()
 				case Command::InsertAfter:
 				{
 					IsEmpty(list);
-					cout << "Ââåäèòå èíäåêñ ýëåìåíòà: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 					InsertNode(list,
 						GetValue<size_t>(0, lastElementIndex, IsRange) + 1,
 						GetValue<int>());
@@ -56,7 +56,7 @@ int main()
 				case Command::InsertBefore:
 				{
 					IsEmpty(list);
-					cout << "Ââåäèòå èíäåêñ ýëåìåíòà: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 					InsertNode(list,
 						GetValue<size_t>(0, lastElementIndex, IsRange),
 						GetValue<int>());
@@ -69,7 +69,7 @@ int main()
 				}
 				case Command::LinearSearch:
 				{
-					cout << "Ââåäèòå çíà÷åíèå ïîèñêà: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð¸ÑÐºÐ°: ";
 					LinearSearch(list, GetValue<int>());
 					system("pause");
 					break;

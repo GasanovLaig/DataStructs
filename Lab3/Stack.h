@@ -33,7 +33,7 @@ T Stack<T>::Pop()
 {
 	if (IsEmpty())
 	{
-		throw std::exception("Ñòåê ïóñò!");
+		throw std::exception("Ð¡Ñ‚ÐµÐº Ð¿ÑƒÑÑ‚!");
 	}
 
 	T value = _top->Data;

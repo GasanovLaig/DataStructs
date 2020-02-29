@@ -10,7 +10,7 @@ int main()
 		system("cls");
 		PrintMainTextMenu();
 
-		cout << "Введите номер команды: ";
+		cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РєРѕРјР°РЅРґС‹: ";
 		Command command = GetValue(Command::Stack, Command::Exit,
 			IsRange);
 
@@ -18,7 +18,7 @@ int main()
 		{
 			case Command::Stack:
 			{
-				string menuName("Стек");
+				string menuName("РЎС‚РµРє");
 
 				using Stack = Stack<DataType>;
 				Stack stack;
@@ -28,7 +28,7 @@ int main()
 			}
 			case Command::DoubleStackQueue:
 			{
-				string menuName("Очередь на основе двух стеков");
+				string menuName("РћС‡РµСЂРµРґСЊ РЅР° РѕСЃРЅРѕРІРµ РґРІСѓС… СЃС‚РµРєРѕРІ");
 
 				using Queue = DoubleStackQueue<DataType>;
 				Queue queue;
@@ -38,10 +38,10 @@ int main()
 			}
 			case Command::RingBuffer:
 			{
-				string menuName("Кольцевой буфер");
+				string menuName("РљРѕР»СЊС†РµРІРѕР№ Р±СѓС„РµСЂ");
 
 				using Ring = RingBuffer<DataType>;
-				cout << "Введите размер буфера: ";
+				cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ Р±СѓС„РµСЂР°: ";
 				size_t startingBufferSize = GetValue<size_t>();
 				Ring ring(startingBufferSize);
 

@@ -19,9 +19,9 @@ void PrintMenu()
 	while (true)
 	{
 		system("cls");
-		cout << "Êîëè÷åñòâî ïàð (Ðàçìåð òàáèöû): " <<
+		cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ð°Ñ€ (Ð Ð°Ð·Ð¼ÐµÑ€ Ñ‚Ð°Ð±Ð¸Ñ†Ñ‹): " <<
 			container.GetSize() << '(' << container.GetMaxSize() <<
-			")\nÊîýôèöèåíò çàïîëíåíèÿ: " <<
+			")\nÐšÐ¾ÑÑ„Ð¸Ñ†Ð¸ÐµÐ½Ñ‚ Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ: " <<
 			static_cast<float>(container.GetSize()) /
 			static_cast<float>(container.GetMaxSize()) << "\n\n";
 		container.Print();
@@ -29,7 +29,7 @@ void PrintMenu()
 
 		try
 		{
-			cout << "\nÂâåäèòå íîìåð êîìàíäû: ";
+			cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹: ";
 			Command command = GetValue(Command::AddPair, Command::Exit,
 				IsRange);
 
@@ -37,7 +37,7 @@ void PrintMenu()
 			{
 				case Command::AddPair:
 				{
-					cout << "Ââåäèòå çíà÷åíèå: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 					regex lineFormat("[A-z]+[ ][A-z]+");
 					istringstream inputStream(GetValue(lineFormat));
 					Pair pair;
@@ -47,13 +47,13 @@ void PrintMenu()
 				}
 				case Command::RemovePair:
 				{
-					cout << "Ââåäèòå êëþ÷: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡: ";
 					container.Remove(GetValue());
 					break;
 				}
 				case Command::FindPairs:
 				{
-					cout << "Ââåäèòå êëþ÷: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡: ";
 					auto pairs = container.Find(GetValue());
 					for (const auto* pair : pairs)
 					{
@@ -75,7 +75,7 @@ void PrintMenu()
 		}
 		catch (const bad_alloc&)
 		{
-			cerr << "Îøèáêà âûäåëåíèÿ ïàìÿòè!\n";
+			cerr << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ñ‹Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð¿Ð°Ð¼ÑÑ‚Ð¸!\n";
 			system("pause");
 		}
 		catch (const exception& exception)
@@ -89,19 +89,19 @@ void PrintMenu()
 
 void PrintMainTextMenu()
 {
-	cout << "\n\t0 Õåø-òàáëèöà.\n" <<
-		"\t1 Ñëîâàðü.\n" <<
-		"\t2 Âûõîä èç ïðîãðàììû.\n";
+	cout << "\n\t0 Ð¥ÐµÑˆ-Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð°.\n" <<
+		"\t1 Ð¡Ð»Ð¾Ð²Ð°Ñ€ÑŒ.\n" <<
+		"\t2 Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹.\n";
 }
 
 
 void PrintTextMenu()
 {
-	cout << "\n\t0 Äîáàâèòü ïàðó.\n" <<
-		"\t1 Óäàëèòü êëþ÷.\n" <<
-		"\t2 Ïîèñê ïî êëþ÷þ.\n" <<
-		"\t3 Çàïîëíèòü ðàíäîìíûìè ïàðàìè.\n" <<
-		"\t4 Âûõîä èç ïðîãðàììû.\n";
+	cout << "\n\t0 Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð¿Ð°Ñ€Ñƒ.\n" <<
+		"\t1 Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÐºÐ»ÑŽÑ‡.\n" <<
+		"\t2 ÐŸÐ¾Ð¸ÑÐº Ð¿Ð¾ ÐºÐ»ÑŽÑ‡ÑŽ.\n" <<
+		"\t3 Ð—Ð°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ñ€Ð°Ð½Ð´Ð¾Ð¼Ð½Ñ‹Ð¼Ð¸ Ð¿Ð°Ñ€Ð°Ð¼Ð¸.\n" <<
+		"\t4 Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹.\n";
 }
 
 

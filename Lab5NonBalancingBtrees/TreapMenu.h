@@ -19,7 +19,7 @@ void PrintTreapMenu()
 		treap.Print();
 		PrintTreapTextMenu();
 
-		cout << "\nВведите команду: ";
+		cout << "\nРўС‚С…С„С€С’С… СЉСЋСЊСЂСЌС„С“: ";
 		TreapCommand command = GetValue(TreapCommand::AddRandomValues,
 			TreapCommand::Exit, IsRange);
 
@@ -29,7 +29,7 @@ void PrintTreapMenu()
 			{
 				case TreapCommand::AddRandomValues:
 				{
-					cout << "Введите количество элементов: ";
+					cout << "РўС‚С…С„С€С’С… СЉСЋС‹С€С—С…С‘С’С‚СЋ В§С‹С…СЊС…СЌС’СЋС‚: ";
 					size_t count = GetValue<size_t>();
 					for (size_t i = 0; i < count; ++i)
 					{
@@ -39,44 +39,44 @@ void PrintTreapMenu()
 				}
 				case TreapCommand::AddValueNonOptimized:
 				{
-					cout << "Введите ключ: ";
+					cout << "РўС‚С…С„С€С’С… СЉС‹СћС—: ";
 					T key = GetValue<T>();
 					treap.AddNonOptimized(key);
 					break;
 				}
 				case TreapCommand::AddValueOptimized:
 				{
-					cout << "Введите ключ: ";
+					cout << "РўС‚С…С„С€С’С… СЉС‹СћС—: ";
 					T key = GetValue<T>();
 					treap.AddOptimized(key);
 					break;
 				}
 				case TreapCommand::RemoveValueNonOptimized:
 				{
-					cout << "Введите ключ: ";
+					cout << "РўС‚С…С„С€С’С… СЉС‹СћС—: ";
 					T key = GetValue<T>();
 					treap.RemoveNonOptimized(key);
 					break;
 				}
 				case TreapCommand::RemoveValueOptimized:
 				{
-					cout << "Введите ключ: ";
+					cout << "РўС‚С…С„С€С’С… СЉС‹СћС—: ";
 					T key = GetValue<T>();
 					treap.RemoveOptimized(key);
 					break;
 				}
 				case TreapCommand::FindValue:
 				{
-					cout << "Введите ключ: ";
-					cout << "\nРезультат: " << (treap.Find(GetValue<T>())) ?
-						"ключ найден!" :
-						"ключ не найден!";
+					cout << "РўС‚С…С„С€С’С… СЉС‹СћС—: ";
+					cout << "\nР°С…С‡С“С‹СњС’СЂС’: " << (treap.Find(GetValue<T>())) ?
+						"СЉС‹СћС— СЌСЂС‰С„С…СЌ!" :
+						"СЉС‹СћС— СЌС… СЌСЂС‰С„С…СЌ!";
 					system("pause");
 					break;
 				}
 				case TreapCommand::Testing:
 				{
-					cout << "Количество элементов: ";
+					cout << "РЄСЋС‹С€С—С…С‘С’С‚СЋ В§С‹С…СЊС…СЌС’СЋС‚: ";
 					Testing(GetValue<size_t>());
 					system("pause");
 					break;
@@ -89,7 +89,7 @@ void PrintTreapMenu()
 		}
 		catch (const bad_alloc&)
 		{
-			cerr << "Ошибка выделения памяти!\n";
+			cerr << "Р®СС€СЃСЉСЂ С‚С›С„С…С‹С…СЌС€Сџ СЏСЂСЊСџС’С€!\n";
 			system("pause");
 		}
 		catch (const exception& exception)
@@ -102,12 +102,12 @@ void PrintTreapMenu()
 
 void PrintTreapTextMenu()
 {
-	cout << "\n\n\t 0 Добавить n рандомных ключей.\n" <<
-		"\t 1 Добавить ключ(не оптимизированный).\n" <<
-		"\t 2 Добавить ключ(оптимизированный).\n" <<
-		"\t 3 Удалить ключ(не оптимизированный).\n" <<
-		"\t 4 Удалить ключ(оптимизированный).\n" <<
-		"\t 5 Поиск по ключу.\n" <<
-		"\t 6 Тестировавние вставки и удаления.\n" <<
-		"\t 7 Выход в главное меню.\n";
+	cout << "\n\n\t 0 Р¤СЋСЃСЂС‚С€С’Сњ n в„–СЂСЌС„СЋСЊСЌС›С• СЉС‹СћС—С…С‰.\n" <<
+		"\t 1 Р¤СЋСЃСЂС‚С€С’Сњ СЉС‹СћС—(СЌС… СЋСЏС’С€СЊС€С‡С€в„–СЋС‚СЂСЌСЌС›С‰).\n" <<
+		"\t 2 Р¤СЋСЃСЂС‚С€С’Сњ СЉС‹СћС—(СЋСЏС’С€СЊС€С‡С€в„–СЋС‚СЂСЌСЌС›С‰).\n" <<
+		"\t 3 РіС„СЂС‹С€С’Сњ СЉС‹СћС—(СЌС… СЋСЏС’С€СЊС€С‡С€в„–СЋС‚СЂСЌСЌС›С‰).\n" <<
+		"\t 4 РіС„СЂС‹С€С’Сњ СЉС‹СћС—(СЋСЏС’С€СЊС€С‡С€в„–СЋС‚СЂСЌСЌС›С‰).\n" <<
+		"\t 5 РЇСЋС€С‘СЉ СЏСЋ СЉС‹СћС—С“.\n" <<
+		"\t 6 РІС…С‘С’С€в„–СЋС‚СЂС‚СЌС€С… С‚С‘С’СЂС‚СЉС€ С€ С“С„СЂС‹С…СЌС€Сџ.\n" <<
+		"\t 7 РўС›С•СЋС„ С‚ СѓС‹СЂС‚СЌСЋС… СЊС…СЌСћ.\n";
 }

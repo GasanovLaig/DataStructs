@@ -16,17 +16,17 @@ void Test(Treap<U> &treap, void (Treap<U>::*TestingFunction)(U data),
 void Testing(size_t elementCount)
 {
 	Treap<short> treap;
-	std::cout << "Âðåìÿ íåîïòèìèçèðîâàííîé âñòàâêè: ";
+	std::cout << "Ð¢â„–Ñ…ÑŒÑŸ ÑÑ…ÑŽÑÑ’ÑˆÑŒÑˆÑ‡Ñˆâ„–ÑŽÑ‚Ñ€ÑÑÑŽÑ‰ Ñ‚Ñ‘Ñ’Ñ€Ñ‚ÑŠÑˆ: ";
 	Test(treap, &Treap<short>::AddNonOptimized, elementCount);
-	std::cout << " (âûñîòà äåðåâà = " << treap.GetHeight() << ")\n";
+	std::cout << " (Ñ‚Ñ›Ñ‘ÑŽÑ’Ñ€ Ñ„Ñ…â„–Ñ…Ñ‚Ñ€ = " << treap.GetHeight() << ")\n";
 
-	std::cout << "\nÂðåìÿ íåîïòèìèçèðîâàííîãî óäàëåíèÿ äîáàâëåííûõ ýëåìåíòîâ: ";
+	std::cout << "\nÐ¢â„–Ñ…ÑŒÑŸ ÑÑ…ÑŽÑÑ’ÑˆÑŒÑˆÑ‡Ñˆâ„–ÑŽÑ‚Ñ€ÑÑÑŽÑƒÑŽ Ñ“Ñ„Ñ€Ñ‹Ñ…ÑÑˆÑŸ Ñ„ÑŽÑÑ€Ñ‚Ñ‹Ñ…ÑÑÑ›Ñ• Â§Ñ‹Ñ…ÑŒÑ…ÑÑ’ÑŽÑ‚: ";
 	Test(treap, &Treap<short>::RemoveNonOptimized, elementCount);
 
-	std::cout << "Âðåìÿ îïòèìèçèðîâàííîé âñòàâêè: ";
+	std::cout << "Ð¢â„–Ñ…ÑŒÑŸ ÑŽÑÑ’ÑˆÑŒÑˆÑ‡Ñˆâ„–ÑŽÑ‚Ñ€ÑÑÑŽÑ‰ Ñ‚Ñ‘Ñ’Ñ€Ñ‚ÑŠÑˆ: ";
 	Test(treap, &Treap<short>::AddOptimized, elementCount);
-	std::cout << " (âûñîòà äåðåâà = " << treap.GetHeight() << ")\n";
+	std::cout << " (Ñ‚Ñ›Ñ‘ÑŽÑ’Ñ€ Ñ„Ñ…â„–Ñ…Ñ‚Ñ€ = " << treap.GetHeight() << ")\n";
 
-	std::cout << "\nÂðåìÿ îïòèìèçèðîâàííîãî óäàëåíèÿ äîáàâëåííûõ ýëåìåíòîâ: ";
+	std::cout << "\nÐ¢â„–Ñ…ÑŒÑŸ ÑŽÑÑ’ÑˆÑŒÑˆÑ‡Ñˆâ„–ÑŽÑ‚Ñ€ÑÑÑŽÑƒÑŽ Ñ“Ñ„Ñ€Ñ‹Ñ…ÑÑˆÑŸ Ñ„ÑŽÑÑ€Ñ‚Ñ‹Ñ…ÑÑÑ›Ñ• Â§Ñ‹Ñ…ÑŒÑ…ÑÑ’ÑŽÑ‚: ";
 	Test(treap, &Treap<short>::RemoveOptimized, elementCount);
 }

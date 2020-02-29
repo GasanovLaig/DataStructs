@@ -7,7 +7,7 @@ int main()
 	{
 		system("cls");
 		PrintMainTextMenu();
-		cout << "\nÂâåäèòå íîìåð êîìàíäû: ";
+		cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹: ";
 		CommandMenu command = GetValue(CommandMenu::AvlTree,
 			CommandMenu::Exit, IsRange);
 
@@ -27,7 +27,7 @@ int main()
 			}
 			case CommandMenu::Testing:
 			{
-				cout << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: ";
 				Testing(GetValue<size_t>());
 				system("pause");
 				break;
