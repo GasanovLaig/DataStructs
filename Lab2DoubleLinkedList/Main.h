@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <exception>
-#include "../myLib/GetValue.h"
+#include "../Common/GetValue.h"
 using namespace std;
 
 enum class Command

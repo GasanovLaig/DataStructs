@@ -1,8 +1,8 @@
 #pragma once
 #include "Treap.h"
 #include "MenuCommands.h"
-#include "../myLib/GetValue.h"
-#include "../myLib/GetRandomValue.h"
+#include "../Common/GetValue.h"
+#include "../Common/GetRandomValue.h"
 #include "TreapTesting.h"
 using namespace std;
 

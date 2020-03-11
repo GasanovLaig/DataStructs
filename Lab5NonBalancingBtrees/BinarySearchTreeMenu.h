@@ -2,8 +2,8 @@
 #include "Treap.h"
 #include <iostream>
 #include "MenuCommands.h"
-#include "../myLib/GetRandomValue.h"
-#include "../myLib/GetValue.h"
+#include "../Common/GetRandomValue.h"
+#include "../Common/GetValue.h"
 using namespace std;
 
 void PrintBinarySearchTreeTextMenu();

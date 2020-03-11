@@ -3,8 +3,8 @@
 #include "RedBlackTree.h"
 
 #include <iostream>
-#include "../myLib/GetValue.h"
-#include "../myLib/GetRandomValue.h"
+#include "../Common/GetValue.h"
+#include "../Common/GetRandomValue.h"
 #include "MenuCommands.h"
 #include "Testing.h"
 using namespace std;

@@ -4,7 +4,7 @@
 #include "RingBuffer.h"
 
 #include "MenuCommands.h"
-#include "../myLib/GetValue.h"
+#include "../Common/GetValue.h"
 using namespace std;
 
 void PrintTextMenu();
