@@ -11,7 +11,7 @@ int main()
 		system("cls");
 		PrintTextMainMenu();
 
-		cout << "\nТтхфшђх ъюьрэфѓ: ";
+		cout << "\nВведите номер команды: ";
 		CommandMenu command = GetValue(CommandMenu::BinarySearchTree,
 			CommandMenu::Exit, IsRange);
 
