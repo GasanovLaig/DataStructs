@@ -13,31 +13,40 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\BinarySearchTree">
+      <UniqueIdentifier>{dd738248-626b-4eda-8ca4-195182bfee2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Treap">
+      <UniqueIdentifier>{163e9a58-3e85-459c-9e07-a1cdcfcc27b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinarySearchTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BinarySearchTreeMenu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BinaryTreeNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MenuCommands.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BinarySearchTree.h">
+      <Filter>Header Files\BinarySearchTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearchTreeMenu.h">
+      <Filter>Header Files\BinarySearchTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTreeNode.h">
+      <Filter>Header Files\BinarySearchTree</Filter>
+    </ClInclude>
     <ClInclude Include="Treap.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Treap</Filter>
     </ClInclude>
     <ClInclude Include="TreapMenu.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Treap</Filter>
     </ClInclude>
     <ClInclude Include="TreapTesting.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Treap</Filter>
+    </ClInclude>
+    <ClInclude Include="TreapNode.h">
+      <Filter>Header Files\Treap</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

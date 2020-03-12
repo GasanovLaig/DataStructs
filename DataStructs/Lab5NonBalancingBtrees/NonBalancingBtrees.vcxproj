@@ -145,6 +145,7 @@
     <ClInclude Include="MenuCommands.h" />
     <ClInclude Include="Treap.h" />
     <ClInclude Include="TreapMenu.h" />
+    <ClInclude Include="TreapNode.h" />
     <ClInclude Include="TreapTesting.h" />
   </ItemGroup>
   <ItemGroup>
